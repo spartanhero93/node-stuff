@@ -57,6 +57,9 @@ npm outdated
 
 npm update
 * it will only update minor and patch updates
+
+npm version [major, minor, patch]
+*This is used to update your current published npm package
 */
 
 // <=== npm-check-updates ===>//
