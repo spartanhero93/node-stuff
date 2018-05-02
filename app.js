@@ -26,16 +26,43 @@ function createServer () {
       case '/waifus':
         res.write(JSON.stringify(['Isla', 'Taiga', 'Yuno']))
         res.end()
+        break
       default:
         break
     }
   })
 
-  server.listen(9000)
-
-  console.log('listening on port 9000')
+  server.listen(9000, console.log('listening on port 9000'))
 }
 
 checkMemory()
 readFilesNames()
 createServer()
+
+/*
+npm list
+ * this list all dependencies
+
+npm list --depth=0
+ * only see the dependencies of the application
+
+npm view node-fetch dependencies
+* see the dependencies for that package
+
+npm view node-fetch versions
+* see all the previous versions of that package
+
+npm outdated
+* check the current versions, latest, wanted versions, and thier locations
+
+npm update
+* it will only update minor and patch updates
+*/
+
+// <=== npm-check-updates ===>//
+/*
+ncu -u
+* this will update the current package.json to latest updates including major
+
+**** Dont forget to npm install to install the updates! ****
+*/
